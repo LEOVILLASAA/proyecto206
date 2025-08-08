@@ -1,0 +1,219 @@
+/* estilos.css */
+
+/* Estilo para todo el cuerpo */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #00a9f4, #00a9f4); /* Degradado de turquesa suave a azul moderado */
+    height: 100%;
+}
+
+
+/* Fondo Degradado con Animación para Login y Páginas Principales */
+.main-background, .login-background {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #043a47, #1cb5e0, #00a9f4, #0072ff); /* Turquesa Oscuro, Azul Turquesa Claro y Azul Intenso */
+    background-size: 400% 400%;
+    animation: blueTurquoiseShift 15s ease infinite; /* Animación del degradado */
+}
+
+@keyframes blueTurquoiseShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Botón específico para Login */
+.btn-login {
+    background: linear-gradient(45deg, #1cb5e0, #0072ff); /* Degradado de azul turquesa claro a azul intenso */
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.4); /* Sombra azul */
+}
+
+.btn-login:hover {
+    background: linear-gradient(45deg, #0072ff, #0056b3); /* Degradado a un azul más intenso al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+/* Botón Primario Básico para módulos */
+.btn-primary {
+    background-color: #007bff; /* Azul sin degradado */
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    transform: translateY(-2px);
+}
+
+/* Encabezado (Navbar) */
+.navbar {
+    background: linear-gradient(90deg, #043a47, #1a1a1a) !important; /* Degradado de turquesa oscuro a negro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: none; /* Quitar la línea de acento */
+}
+
+.nav-link, .navbar-brand {
+    color: #eaeaea !important; /* Color de texto más claro */
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background: #1c1c1c; /* Efecto hover más sutil */
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+
+.nav-item.active .nav-link {
+    color: #0d6efd; /* Color de acento para enlace activo */
+    border-bottom: 2px solid #0d6efd;
+}
+
+/* Pie de Página (Footer) */
+.footer {
+    background: linear-gradient(90deg, #043a47, #1a1a1a) !important; /* Degradado turquesa oscuro con gris */
+    color: #cccccc; /* Texto en gris claro */
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Tarjetas del Dashboard */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.15); /* Borde ligeramente resaltado */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff; /* Fondo blanco */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra para resaltar las tarjetas */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border: 1px solid rgba(0, 0, 0, 0.25); /* Borde más oscuro al pasar el mouse */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra más marcada al pasar el mouse */
+}
+
+/* Estilos de Tarjetas según el Módulo */
+.card-body i {
+    margin-bottom: 15px;
+    color: #043a47; /* Iconos en turquesa oscuro */
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d2d2d; /* Color neutro oscuro */
+}
+
+/* Estilo Moderno de Texto y Encabezados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #333333; /* Color gris oscuro */
+}
+
+.lead {
+    color: #6c757d; /* Color gris suave */
+    font-weight: 300;
+}
+
+/* Contenedor Principal del Dashboard */
+.dashboard-container {
+    height: auto;
+    padding: 20px;
+}
+
+/* Fondo del Contenedor del Dashboard */
+.dashboard-content {
+    background: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.15); /* Borde oscuro sutil */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más oscura para mayor contraste */
+}
+
+/* Formulario de Inicio de Sesión */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-card {
+    width: 400px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+    border-radius: 15px;
+    background-color: #ffffff;
+    position: relative;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% { transform: translateY(-30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.login-card h2 {
+    margin-bottom: 1.5rem;
+    color: #043a47; /* Turquesa Oscuro */
+    font-weight: 700;
+}
+
+/* Campos de Entrada */
+.form-control {
+    border-radius: 30px;
+    padding: 12px 15px;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.15);
+}
+
+.form-control:focus {
+    border-color: #043a47; /* Cambio de color en borde */
+    box-shadow: 0 0 8px rgba(4, 58, 71, 0.5); /* Sombra turquesa oscuro al enfocar */
+}
+
+/* Retroalimentación Visual en Campos de Error */
+.form-text.text-danger {
+    font-size: 0.9rem;
+    color: #dc3545; /* Rojo más claro */
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 768px) {
+    .navbar .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+    }
+
+    .card-body i {
+        font-size: 2.5rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .login-card {
+        width: 90%;
+    }
+}
